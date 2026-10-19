@@ -7,7 +7,7 @@
   "createdAt": "2026-10-19T01:03:26.950Z",
   "finalProduct": "deliverables/final.md",
   "note": "The colony works until every requirement below holds, then raises the bar and keeps going (see \"level\"): set \"expand\": false to let it finish, or \"maxLevel\" to change how far it goes. Edit a threshold, add or remove a requirement, and the colony follows the new definition on its next round.",
-  "level": 0,
+  "level": 4,
   "checks": [
     {
       "id": "plan",
@@ -80,6 +80,24 @@
         "analysis"
       ],
       "fix": "Write docs/notes.md: the key facts, sources and reasoning behind deliverables/final.md. At least 150 words."
+    },
+    {
+      "id": "expansion",
+      "label": "Expansion (level 4)",
+      "kind": "dirFiles",
+      "dir": "deliverables/expansion",
+      "ext": [
+        ".md"
+      ],
+      "min": 8,
+      "minWords": 300,
+      "tags": [
+        "writing",
+        "research",
+        "synthesis",
+        "review"
+      ],
+      "fix": "Write deliverables/expansion/NN-topic.md (NN = the next number): extend the project beyond what it covers now. Choose one gap - a topic not yet covered, a claim that needs evidence or a source, a worked example, an exercise, or the strongest objection to what is written so far - and cover it in at least 300 words of new substance. Do not restate existing files. The colony needs 8 of these in total (expansion level 4)."
     },
     {
       "id": "no-placeholders",
