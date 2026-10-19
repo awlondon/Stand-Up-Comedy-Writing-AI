@@ -1,0 +1,114 @@
+{
+  "schema": 1,
+  "type": "generic",
+  "label": "deliverable",
+  "title": "Write a timeless, original, evocative stand-up comedy set inspired by the greatest comedy writers and...",
+  "purpose": "Write a timeless, original, evocative stand-up comedy set inspired by the greatest comedy writers and standups of the past 50 years, but make it unique to you.",
+  "createdAt": "2026-10-19T01:03:26.950Z",
+  "finalProduct": "deliverables/final.md",
+  "note": "The colony works until every requirement below holds, then raises the bar and keeps going (see \"level\"): set \"expand\": false to let it finish, or \"maxLevel\" to change how far it goes. Edit a threshold, add or remove a requirement, and the colony follows the new definition on its next round.",
+  "level": 0,
+  "checks": [
+    {
+      "id": "plan",
+      "label": "Plan: scope, parts, success criteria",
+      "kind": "headings",
+      "path": "docs/plan.md",
+      "minWords": 120,
+      "headings": [
+        {
+          "re": "scope|purpose|goals?|aims?",
+          "label": "Scope"
+        },
+        {
+          "re": "parts?|sections?|modules?|chapters?|contents|outline|topics?",
+          "label": "Parts"
+        },
+        {
+          "re": "success|criteria|done|finish",
+          "label": "Success criteria"
+        }
+      ],
+      "tags": [
+        "planning",
+        "structure",
+        "writing"
+      ],
+      "fix": "Write docs/plan.md with three sections named Scope (what the purpose needs, who it is for), Parts (a bulleted or numbered list: one line per part the deliverable should contain: 6 to 12 parts, each on its own distinct topic with no overlap between them - later growth belongs in expansion, not in more plan lines) and Success criteria (how the owner can tell it worked). At least 120 words. Send it as one repo-file block."
+    },
+    {
+      "id": "parts",
+      "label": "A finished part for every item in the plan",
+      "kind": "planParts",
+      "after": [
+        "plan"
+      ],
+      "plan": "docs/plan.md",
+      "dir": "deliverables/parts",
+      "min": 3,
+      "minWords": 300,
+      "maxParts": 12,
+      "tags": [
+        "writing",
+        "research",
+        "synthesis"
+      ],
+      "fix": "Write the next missing part as deliverables/parts/NN-topic.md (NN = 01, 02, ... in plan order), taking one item from the Parts list in docs/plan.md. At least 300 words of real substance. One part per cycle, whole file in one repo-file block."
+    },
+    {
+      "id": "final",
+      "label": "The finished deliverable",
+      "kind": "file",
+      "path": "deliverables/final.md",
+      "minWords": 600,
+      "tags": [
+        "writing",
+        "synthesis",
+        "research"
+      ],
+      "fix": "deliverables/final.md is assembled by the colony from deliverables/parts/ and deliverables/expansion/; do not write it. Write the next missing part instead."
+    },
+    {
+      "id": "notes",
+      "label": "Supporting notes",
+      "kind": "file",
+      "path": "docs/notes.md",
+      "minWords": 150,
+      "tags": [
+        "research",
+        "docs",
+        "analysis"
+      ],
+      "fix": "Write docs/notes.md: the key facts, sources and reasoning behind deliverables/final.md. At least 150 words."
+    },
+    {
+      "id": "no-placeholders",
+      "label": "No placeholder text",
+      "kind": "noPlaceholders",
+      "paths": [
+        "deliverables",
+        "docs"
+      ],
+      "tags": [
+        "review",
+        "editing"
+      ],
+      "fix": "Replace every TODO / TBD / placeholder / \"[insert ...]\" / \"(rest unchanged)\" marker with the real content, using repo-edit on the file named in the problem."
+    },
+    {
+      "id": "arithmetic",
+      "label": "Calculations in the documents are correct",
+      "kind": "arithmetic",
+      "paths": [
+        "deliverables",
+        "docs"
+      ],
+      "tags": [
+        "verification",
+        "review",
+        "editing"
+      ],
+      "fix": "Recompute the calculation the problem names and correct it (or delete it) in the file named. Write only a result you have actually worked out; do not invent a value that makes an example look like it works."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "stand-up-comedy-set",
+  "version": "1.0.0",
+  "description": "Scripts for generating, testing, and scheduling the final presentation of the stand-up comedy set.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node scripts/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
