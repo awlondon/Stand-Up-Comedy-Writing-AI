@@ -1,0 +1,6 @@
+# Define attributes for files in the scripts directory
+*.js linguist-language=JavaScript
+*.json linguist-language=JSON
+*.md linguist-language=Markdown
+*.env linguist-language=Properties
+*.gitignore linguist-language=Gitignore
